@@ -24,18 +24,18 @@ class Productseeder extends Seeder
         ]);
 
         Product::updateOrCreate([
-            'name' => 'Racão Premier',
-            'category_id' => '3',
-            'bulk_slug' => "KG",
+            'name' => 'bolsas',
+            'category_id' => '2',
+            'bulk_slug' => "un",
             'quantity' => "10"
 
         ]);
 
         Product::updateOrCreate([
-            'name' => 'Racão Golden',
+            'name' => 'cimento',
             'category_id' => '3',
             'bulk_slug' => "KG",
-            'quantity' => "10"
+            'quantity' => "20"
 
         ]);
     }
