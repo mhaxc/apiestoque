@@ -9,10 +9,10 @@ use Illuminate\Http\Request;
 class StockLocationController extends Controller
 {
 
-    private $location;
-    public function __construct(StockLocation $location)
+    private $model;
+    public function __construct(StockLocation $model)
     {
-        $this->location = $location;
+        $this->model = $model;
     }
 
     public function index()

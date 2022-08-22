@@ -12,18 +12,18 @@ class CategoryController extends Controller{
     private $model;
     public function __construct(Category $model)
     {
-        $this->category = $model;
+        $this->model = $model;
     }
 
     public function index()
     {
-        $data = $this->category->all();
+        $data = $this->model->all();
         return response()->json($data);
     }
 
     public function show($id)
     {
-        $data = $this->category->find($id);
+        $data = $this->model->find($id);
         return response()->json($data);
     }
 
@@ -31,21 +31,21 @@ class CategoryController extends Controller{
     {
   
 
-        $data = $this->category->create($request->all());
+        $data = $this->model->create($request->all());
         return response()->json($data);
     }
 
     public function update(CategoryRequest $request, $id)
     {
 
-        $data = $this->category->find($id);
+        $data = $this->model->find($id);
         $data->update($request->all());
         return response()->json($data);
     }
 
     public function delete($id)
     {
-        $data = $this->category->find($id);
+        $data = $this->model->find($id);
         $data->delete();
 
         return response()->json('',201);

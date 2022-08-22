@@ -9,10 +9,10 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
 
-    private $user;
-    public function __construct(User $user)
+    private $model;
+    public function __construct(User $model)
     {
-        $this->user = $user;
+        $this->model = $model;
     }
 
 

@@ -9,10 +9,10 @@ use Illuminate\Http\Request;
 class StockController extends Controller
 {
 
-    private $stock;
-    public function __construct(Stock $stock)
+    private $model;
+    public function __construct(Stock $model)
     {
-        $this->stock = $stock;
+        $this->model = $model;
     }
 
 

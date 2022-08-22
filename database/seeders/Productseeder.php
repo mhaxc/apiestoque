@@ -19,7 +19,7 @@ class Productseeder extends Seeder
             'name' => 'computador',
             'category_id' => '1',
             'bulk_slug' => "un",
-            'quantity' => "22"
+            'quantity' => "20"
 
         ]);
 

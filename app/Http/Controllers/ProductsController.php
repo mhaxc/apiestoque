@@ -9,10 +9,10 @@ use Illuminate\Http\Request;
 class ProductsController extends Controller
 {
 
-    private $products;
-    public function __construct(Product $products)
+    private $model;
+    public function __construct(Product $model)
     {
-        $this->products = $products;
+        $this->model = $model;
     }
 
     public function index()

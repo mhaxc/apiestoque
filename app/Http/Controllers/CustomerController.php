@@ -9,10 +9,10 @@ use Illuminate\Http\Request;
 class CustomerController extends Controller
 {
 
-    private $customer;
+    private $model;
     public function __construct(Customer $customer)
     {
-        $this->customer = $customer;
+        $this->model = $model;
     }
 
 
@@ -49,6 +49,6 @@ class CustomerController extends Controller
         $data = Customer::find($id);
         $data->delete();
 
-        return response()->json('', 201);
+        return response()->json('erro', 201);
     }
 }

@@ -12,18 +12,18 @@ class OrderController extends Controller
 {
 
 
-    private $order;
-    public function __construct(Order $order)
+    private $model;
+    public function __construct(Order $model)
     {
-        $this->order = $order;
+        $this->model = $model;
     }
 
     public function index()
     {
-        $data = $this->order->with('items')->get();
+        $data = $this->model->with('items')->get();
 
         return response()->json($data);
-        /*return view("Order.create");*/
+      
     }
 
     public function show($id)
@@ -32,7 +32,7 @@ class OrderController extends Controller
         return response()->json($data);
     }
 
-    //tentativa de mostrar só 1 item do pedido
+ 
     public function showItemOrder($id, $product_id)
     {
         $data = Order::find($id, $product_id);

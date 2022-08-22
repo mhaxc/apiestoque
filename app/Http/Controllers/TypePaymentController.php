@@ -9,10 +9,10 @@ use Illuminate\Http\Request;
 class TypePaymentController extends Controller
 {
 
-    private $payment;
-    public function __construct(TypePayment $payment)
+    private $model;
+    public function __construct(TypePayment $model)
     {
-        $this->payment = $payment;
+        $this->model = $model;
     }
 
     public function index()
