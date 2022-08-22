@@ -9,10 +9,10 @@ use Illuminate\Http\Request;
 class CategoryController extends Controller{
 
 
-    private $category;
-    public function __construct(Category $category)
+    private $model;
+    public function __construct(Category $model)
     {
-        $this->category = $category;
+        $this->category = $model;
     }
 
     public function index()

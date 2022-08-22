@@ -62,8 +62,6 @@ Route::get('orders/{id}', [OrderController::class, 'show']);
 
 Route::get('orders/{id}/items/{products_id}', [OrderController::class, 'showItemOrder']);
 Route::post('orders', [OrderController::class, 'store']);
-
-
 Route::post('orders/{id}/items', [OrderController::class, 'StoreAddItem']);
 
 
@@ -79,9 +77,6 @@ Route::get('stocks_locations/{id}', [StockLocationController::class, 'show']);
 Route::post('stocks_locations', [StockLocationController::class, 'store']);
 Route::put('stocks_locations/{id}', [StockLocationController::class, 'update']);
 Route::delete('stocks_locations/{id}', [StockLocationController::class, 'delete']);
-
-
-
 Route::get('stocks', [StockController::class, 'index']);
 
 //users
